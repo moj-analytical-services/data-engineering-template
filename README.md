@@ -14,5 +14,8 @@ Once you have created your repository, please:
 
 This template is based on the more general [Ministry of Justice template repo](https://github.com/ministryofjustice/template-repository). 
 
+## To discuss
+- How fierce to be on gitignore? We want data to go in S3 rather than in repos, so gitignore csv and json?
+
 ## Licence
 [MIT Licence](LICENCE.md)
