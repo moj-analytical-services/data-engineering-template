@@ -13,3 +13,6 @@ Once you have created your repository, please:
 * Set up branch protection
 
 This template is based on the more general [Ministry of Justice template repo](https://github.com/ministryofjustice/template-repository). 
+
+## Licence
+[MIT Licence](LICENCE.md)
