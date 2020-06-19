@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# git-crypt check for unencrypted file warnings adapted from https://www.gitmemory.com/issue/AGWA/git-crypt/45/614607121
+if [ -d ".git-crypt" ]; then
+    git-crypt status | grep "*** WARNING"
+	test $? -eq 1
+	
