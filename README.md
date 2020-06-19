@@ -3,19 +3,25 @@
 Use this template to [create a repository](https://github.com/moj-analytical-services/data-engineering-template/generate) with the default initial files for a Ministry of Justice data engineering Github repository. These include:
 
 * the correct licence
-* Github actions
+* pre-commit githooks
 * .gitignore file
 
 Once you have created your repository, please:
 
-* Edit this readme file to document your project
-* Grant permissions to the appropriate MoJ teams
-* Set up branch protection
+* edit this readme file to document your project
+* grant permissions to the appropriate MoJ teams
+* set up branch protection
 
 This template is based on the more general [Ministry of Justice template repo](https://github.com/ministryofjustice/template-repository). 
 
 # Formatting and linting
-The filed called .flake8 is a config file that sets the linter's max line length to 88. This is to match Black's default. It's the team's agreed preferred max line length. 
+The file called .flake8 is a config file that sets the linter's max line length to 88. This is to match Black's default. It's the team's agreed preferred max line length. 
+
+Config changes for Black should go in `pyproject.toml`.
+
+Config changes for yamllint should go in `.yamllint`.
+
+Our standard settings use the default for both of these, so at the moment those configs make no changes.  
 
 ## Githooks
 This repo comes with some githooks to make standard checks before you commit files to Github. The checks are: 

@@ -1,0 +1,4 @@
+# for details on config changes see https://yamllint.readthedocs.io/en/stable/configuration.html#extending-the-default-configuration
+
+extends: default
+
