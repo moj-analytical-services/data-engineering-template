@@ -2,16 +2,25 @@
 #
 
 # run Black and flake8 on all .py files in the repo
-echo -e "\e[1mbold\e[0m"
 printf "\n\e[1mRunning Black Python code formatter\e[0m\n"
 black .
-printf "\nRunning flake8 Python linter\n"
+printf "\n\e[1mRunning flake8 Python linter\e[0m\n"
 flake8 .
-printf "\nRunning yamllint .yaml linter\n"
+printf "\n\e[1mRunning yamllint .yaml linter\e[0m\n"
 yamllint .
 
-printf "\nRunning git-crypt status and checking for warnings\n"
+printf "\n\e[1mRunning git-crypt status and checking for warnings\e[0m\n"
 # git-crypt check for unencrypted file warnings adapted from https://www.gitmemory.com/issue/AGWA/git-crypt/45/614607121
 if [ -d ".git-crypt" ]; then
     git-crypt status | grep "\*\*\* WARNING"; test $? -eq 1
 fi
+printf "git-crypt fine\n\n"
+
+exec < /dev/tty
+while read -p "Continue with commit? (Y/n) " yn; do
+    case $yn in
+        [Yy] ) print "Continuing with commit\n"; break;;
+        [Nn] ) printf "Cancelling commit\n"; exit 1;;
+        * ) echo "Please answer y (yes) or n (no):" && continue;
+    esac
+done
