@@ -2,14 +2,15 @@
 #
 
 # run Black and flake8 on all .py files in the repo
-printf "Running Black Python code formatter\n"
+echo -e "\e[1mbold\e[0m"
+printf "\n\e[1mRunning Black Python code formatter\e[0m\n"
 black .
-printf "\n\nRunning flake8 Python linter\n"
+printf "\nRunning flake8 Python linter\n"
 flake8 .
-printf "\n\nRunning yamllint .yaml linter\n"
+printf "\nRunning yamllint .yaml linter\n"
 yamllint .
 
-printf "\n\nRunning git-crypt status and checking for warnings\n"
+printf "\nRunning git-crypt status and checking for warnings\n"
 # git-crypt check for unencrypted file warnings adapted from https://www.gitmemory.com/issue/AGWA/git-crypt/45/614607121
 if [ -d ".git-crypt" ]; then
     git-crypt status | grep "\*\*\* WARNING"; test $? -eq 1
