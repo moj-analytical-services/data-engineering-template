@@ -3,6 +3,6 @@
 extends: default
 
 ignore: |
-	/.git
-	/.github
-	/venv
+    /.git
+    /.github
+    /venv
