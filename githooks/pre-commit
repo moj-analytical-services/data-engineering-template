@@ -19,7 +19,7 @@ printf "git-crypt fine\n\n"
 exec < /dev/tty
 while read -p "Continue with commit? (Y/n) " yn; do
     case $yn in
-        [Yy] ) print "Continuing with commit\n"; break;;
+        [Yy] ) printf "Continuing with commit\n"; break;;
         [Nn] ) printf "Cancelling commit\n"; exit 1;;
         * ) echo "Please answer y (yes) or n (no):" && continue;
     esac
