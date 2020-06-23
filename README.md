@@ -26,9 +26,8 @@ Our standard settings use the default for both of these, so at the moment those 
 ## Githooks
 This repo comes with some githooks to make standard checks before you commit files to Github. The checks are: 
 - if you're using git-crypt, run `git-crypt status` and check for unencrypted file warnings 
-- (NOT YET DONE) run Pytest 
-- (NOT YET DONE) run Black on Python files
-- (NOT YET DONE) run Flake8 on Python files
+- run Black on Python files
+- run Flake8 on Python files
 - (NOT YET DONE) run yamllint on yaml files
 
 ### Installing the hooks
