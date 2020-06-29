@@ -1,3 +1,6 @@
+UPDATE THIS
+STILL TO DO: make pre-commit check if venv active, or at least relevant packages installed
+
 # Ministry of Justice data engineering template repository
 
 Use this template to [create a repository](https://github.com/moj-analytical-services/data-engineering-template/generate) with the default initial files for a Ministry of Justice data engineering Github repository. These include:
