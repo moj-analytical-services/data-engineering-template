@@ -4,6 +4,11 @@
 extends: default
 
 ignore: |
-    /.git
-    /.github
-    /venv
+  /.git
+  /.github
+  /venv
+
+rules:
+  line-length:
+    allow-non-breakable-words: true
+    allow-non-breakable-inline-mappings: true
