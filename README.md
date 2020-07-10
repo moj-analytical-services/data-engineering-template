@@ -32,17 +32,20 @@ You can add these hooks to other repos by copying from this repo's githooks fold
 ### Skipping the hooks
 Once installed, the hooks run each time you commit. To skip them, add `--no-verify` to the end of your commit command. For exmaple, `git commit -m "Committing stuff" --no-verify`.
 
+### Using Poetry
+These hooks aren't set up to work with Poetry. They expect you to have Black, Flake8 and yamllint installed in the same environment you're in when you commit. 
+
+This might change in the future.
+
 ## Formatting and linting configs
 Config changes for flake8 go in .flake8. Our standard settings include:
 - max line length to 88 to match team's preference (and Black default)
 - ignore rule E203 which doesn't quite match PEP8 on spacing around colons (and conflicts with Black)
 - ignore some folders like venv and .github
 
-Config changes for Black should go in `pyproject.toml`. Our standard settings make no changes from default.
+Config changes for yamllint should go in `.yamllint`. 
 
-Config changes for yamllint should go in `.yamllint`.
-
-Our standard settings use the default for both of these, so at the moment those configs make no changes.  
+We use the standard Black config. If you want to change it, you can put config settings in a file called `pyproject.toml`, under a heading that says `[tool.black]`. 
 
 ## Licence
 [MIT Licence](LICENCE.md)
