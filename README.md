@@ -45,7 +45,7 @@ Config changes for flake8 go in .flake8. Our standard settings include:
 
 Config changes for yamllint should go in `.yamllint`. 
 
-We use the standard Black config. If you want to change it, you can put config settings in a file called `pyproject.toml`, under a heading that says `[tool.black]`. 
+We use the standard Black config, so this repo doesn't include a config. To make config changes, add them to a file called `pyproject.toml`, under a line saying `[tool.black]`. 
 
 ## Licence
 [MIT Licence](LICENCE.md)
